@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.loop.pi.price</groupId>
+	<artifactId>loop-price</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Loop Microsevice</name>
+	<description>Loop Microsevice</description>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version> <!-- lookup parent from repository -->
+	</parent>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
+		<loop-inbound.version>${project.version}</loop-inbound.version>
+		<loop-core.version>${project.version}</loop-core.version>
+		<loop-outbound.version>${project.version}</loop-outbound.version>
+		<spring-cloud.version>Dalston.SR2</spring-cloud.version>
+		<springfox-swagger2.version>2.7.0</springfox-swagger2.version>
+		<springfox-swagger-ui.version>2.7.0</springfox-swagger-ui.version>
+		<gson.version>2.8.2</gson.version>
+		<jackson-core.version>2.8.5</jackson-core.version>
+		<jackson-databind.version>2.8.5</jackson-databind.version>
+		<jackson-annotations.version>2.8.5</jackson-annotations.version>
+		<!-- <modelmapper-spring.version>1.1.0</modelmapper-spring.version> -->
+		<!--<spring-data-commons.version>2.0.6.RELEASE</spring-data-commons.version> -->
+		<junit.version>4.12</junit.version>
+		<!-- <jwt.version>1.0.9.RELEASE</jwt.version> -->
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>br.com.loop.pi.price</groupId>
+				<artifactId>loop-inbound</artifactId>
+				<version>${loop-inbound.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.loop.pi.price</groupId>
+				<artifactId>loop-core</artifactId>
+				<version>${loop-core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>br.com.loop.pi.price</groupId>
+				<artifactId>loop-outbound</artifactId>
+				<version>${loop-outbound.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox-swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox-swagger-ui.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${gson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson-core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson-databind.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson-annotations.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>loop-outbound</module>
+		<module>loop-inbound</module>
+		<module>loop-core</module>
+		<module>loop-build</module>
+	</modules>
+</project>
