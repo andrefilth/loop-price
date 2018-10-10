@@ -13,10 +13,10 @@ public class Freios implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Dianteiros")
-	public String dianteiros;
+	private String dianteiros;
 
 	@JsonProperty("Traseiros")
-	public String traseiros;
+	private String traseiros;
 
 	public String getDianteiros() {
 		return dianteiros;

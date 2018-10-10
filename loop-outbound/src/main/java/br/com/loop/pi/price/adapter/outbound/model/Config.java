@@ -13,13 +13,13 @@ public class Config implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("complementExists")
-	public Boolean complementExists;
+	private Boolean complementExists;
 
 	@JsonProperty("complementFounds")
-	public Integer complementFounds;
+	private Integer complementFounds;
 
 	@JsonProperty("partsExists")
-	public Boolean partsExists;
+	private Boolean partsExists;
 
 	public Boolean getComplementExists() {
 		return complementExists;

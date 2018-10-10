@@ -2,13 +2,13 @@ package br.com.loop.pi.price.core.client.dto;
 
 public class AuthorizeDTO {
 	
-	public String nome;
+	private String nome;
 
-	public String token;
+	private String token;
 
-	public String email;
+	private String email;
 
-	public Integer requests;
+	private Integer requests;
 
 	public String getNome() {
 		return nome;

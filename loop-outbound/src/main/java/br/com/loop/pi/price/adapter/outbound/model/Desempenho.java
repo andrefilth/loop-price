@@ -13,7 +13,7 @@ public class Desempenho implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Velocidade m\u00e1xima")
-	public String velocidadeMaxima;
+	private String velocidadeMaxima;
 
 	public String getVelocidadeMaxima() {
 		return velocidadeMaxima;

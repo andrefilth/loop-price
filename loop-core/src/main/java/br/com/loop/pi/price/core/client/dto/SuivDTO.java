@@ -1,61 +1,65 @@
 package br.com.loop.pi.price.core.client.dto;
 
+import java.util.LinkedList;
+import java.util.List;
 
 public class SuivDTO {
 
-	public AuthorizeDTO authorize;
+	private AuthorizeDTO authorize;
 	
-	public String placa;
+	private String placa;
 	
-	public String marca;
+	private String marca;
 	
-	public String modelo;
+	private String modelo;
 	
-	public String versao;
+	private String versao;
 	
-	public String motorizacao;
+	private String motorizacao;
 	
-	public String chassis;
+	private String chassis;
 	
-	public String anoFab;
+	private String anoFab;
 	
-	public String anoMod;
+	private String anoMod;
 	
-	public String combustivel;
+	private String combustivel;
 	
-	public String segmento;
+	private String segmento;
 	
-	public String subsegmento;
+	private String subsegmento;
 	
-	public String carroceria;
+	private String carroceria;
 	
-	public String potencia;
+	private String potencia;
 	
-	public String procedencia;
+	private String procedencia;
 	
-	public String eixosQtd;
+	private String eixosQtd;
 	
-	public String pBT;
+	private String pBT;
 	
-	public String cMT;
+	private String cMT;
 	
-	public String cilindradas;
+	private String cilindradas;
 	
-	public String numLugares;
+	private String numLugares;
 	
-	public String capacCarga;
+	private String capacCarga;
 	
-	public String numCaixaCambio;
+	private String numCaixaCambio;
 	
-	public String numEixoTras;
+	private String numEixoTras;
 	
-	public String numEixoAux;
+	private String numEixoAux;
 	
-	public String numMotor;
+	private String numMotor;
 	
-	public String relatedFipe;
+	private String relatedFipe;
 	
-	public ConfigDTO config;
+	private ConfigDTO configDTO;
+	
+	private List<ComplementoDTO> complementoDTO = new LinkedList<>();
 
 	public AuthorizeDTO getAuthorize() {
 		return authorize;
@@ -265,12 +269,20 @@ public class SuivDTO {
 		this.relatedFipe = relatedFipe;
 	}
 
-	public ConfigDTO getConfig() {
-		return config;
+	public ConfigDTO getConfigDTO() {
+		return configDTO;
 	}
 
-	public void setConfig(ConfigDTO config) {
-		this.config = config;
+	public void setConfigDTO(ConfigDTO configDTO) {
+		this.configDTO = configDTO;
+	}
+
+	public List<ComplementoDTO> getComplementoDTO() {
+		return complementoDTO;
+	}
+	
+	public void setComplementoDTO(List<ComplementoDTO> complementoDTO) {
+		this.complementoDTO = complementoDTO;
 	}
 	
 	

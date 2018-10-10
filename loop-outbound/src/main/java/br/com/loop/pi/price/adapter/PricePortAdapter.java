@@ -26,9 +26,9 @@ public class PricePortAdapter implements PricePortOutboundDB {
 	private SuivClient suivClient;
 	
 	@Override
-	public SuivDTO findBoard(String board) {
+	public SuivDTO findBy(String board) {
 		log.info("Chamando serviço do SUIV: " + SuivClient.URL + " " + board);
-		SuivModel suivModel = suivClient.findBoard(board);
+		SuivModel suivModel = suivClient.findby(board);
 		log.info("Informações da placa recuperado: " + suivModel);
 		//converter valores.
 		SuivDTO suivDTO = SuivDTOMapper.fromEntityToDTO(suivModel);

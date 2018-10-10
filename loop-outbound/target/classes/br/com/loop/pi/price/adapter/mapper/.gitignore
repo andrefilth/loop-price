@@ -1,2 +1,13 @@
-/AuthorizeMapperDTO.class
+/AuthorizeDTOMapper.class
+/CatalogoPecasDTOMapper.class
+/ComplementoDTOMapper.class
+/ConfigDTOMapper.class
+/ConsumoDTOMapper.class
+/DesempenhoDTOMapper.class
+/DimensoesDTOMapper.class
+/DirecaoDTOMapper.class
 /SuivDTOMapper.class
+/TransmissaoDTOMapper.class
+/FichaTecnicaDTOMapper.class
+/FreiosDTOMapper.class
+/MotorDTOMapper.class

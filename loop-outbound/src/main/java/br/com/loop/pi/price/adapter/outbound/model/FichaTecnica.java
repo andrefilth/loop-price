@@ -13,13 +13,13 @@ public class FichaTecnica implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Configura\u00e7\u00e3o")
-	public String configuracao;
+	private String configuracao;
 	
 	@JsonProperty("Ocupantes")
-	public String ocupantes;
+	private String ocupantes;
 	
 	@JsonProperty("Portas")
-	public String portas;
+	private String portas;
 
 	public String getConfiguracao() {
 		return configuracao;

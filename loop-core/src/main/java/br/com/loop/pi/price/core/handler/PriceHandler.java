@@ -18,8 +18,8 @@ public class PriceHandler implements PricePortInbound {
 	private PricePortOutboundDB portOutboundDB;
 
 	@Override
-	public SuivDTO findBoard(String board) {
-		return portOutboundDB.findBoard(board);
+	public SuivDTO findBy(String board) {
+		return portOutboundDB.findBy(board);
 	}
 
 }

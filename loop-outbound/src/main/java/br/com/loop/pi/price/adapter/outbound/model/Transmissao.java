@@ -13,10 +13,10 @@ public class Transmissao implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Tra\u00e7\u00e3o")
-	public String tracao;
+	private String tracao;
 	
 	@JsonProperty("C\u00e2mbio")
-	public String cambio;
+	private String cambio;
 
 	public String getTracao() {
 		return tracao;

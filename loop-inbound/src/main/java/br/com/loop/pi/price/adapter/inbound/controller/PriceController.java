@@ -30,9 +30,9 @@ public class PriceController {
 
 	//@PreAuthorize("#oauth2.hasScope('bar') and #oauth2.hasScope('read') and hasRole('ROLE_ADMIN_WRITE')")
 	@GetMapping("/board")
-	public ResponseEntity<?> findBoard(@RequestParam(value = "board", required = true) String board) {
+	public ResponseEntity<?> findBy(@RequestParam(value = "board", required = true) String board) {
 		log.info("Iniciando busca de infomações do veículo de placa: " + board);
-		SuivDTO suivDTO = portInbound.findBoard(board);
+		SuivDTO suivDTO = portInbound.findBy(board);
 		if (suivDTO == null)
 			throw new BoardNotFoundException( "Placa do veículo não encontrado - Placa: " + board);
 		return new ResponseEntity<>( suivDTO,HttpStatus.OK);

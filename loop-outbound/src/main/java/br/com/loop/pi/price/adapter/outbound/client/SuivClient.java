@@ -19,6 +19,6 @@ public interface SuivClient {
 	public static final String URL = "https://fichatecnica.suiv.com.br/webservice/get/GfZ6xxwOZ6pWSAydhXoG21OG4BdrbZ2x/";
 
 	@GetMapping()
-	public SuivModel findBoard(@RequestParam(value = "placa", required = true) String board);
+	public SuivModel findby(@RequestParam(value = "placa", required = true) String board);
 
 }

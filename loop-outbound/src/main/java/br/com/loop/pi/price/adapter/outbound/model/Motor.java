@@ -14,15 +14,20 @@ public class Motor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Instala\u00e7\u00e3o")
-	public String instalacao;
+	private String instalacao;
+	
 	@JsonProperty("Aspira\u00e7\u00e3o")
-	public String aspiracao;
+	private String aspiracao;
+	
 	@JsonProperty("Disposi\u00e7\u00e3o")
-	public String disposicao;
+	private String disposicao;
+	
 	@JsonProperty("Cilindros")
-	public String cilindros;
+	private String cilindros;
+	
 	@JsonProperty("V\u00e1lvulas por cilindro")
-	public String valvulasPorCilindro;
+	private String valvulasPorCilindro;
+	
 	public String getInstalacao() {
 		return instalacao;
 	}

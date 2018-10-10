@@ -13,13 +13,13 @@ public class Direcao implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Assist\u00eancia")
-	public String assistencia;
+	private String assistencia;
 
 	@JsonProperty("Pneus dianteiros")
-	public String pneusDianteiros;
+	private String pneusDianteiros;
 
 	@JsonProperty("Pneus traseiros")
-	public String pneusTraseiros;
+	private String pneusTraseiros;
 
 	public String getAssistencia() {
 		return assistencia;

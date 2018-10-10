@@ -13,16 +13,16 @@ public class Authorize implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Nome")
-	public String nome;
+	private String nome;
 
 	@JsonProperty("Token")
-	public String token;
+	private String token;
 
 	@JsonProperty("Email")
-	public String email;
+	private String email;
 
 	@JsonProperty("Requests")
-	public Integer requests;
+	private Integer requests;
 
 	public String getNome() {
 		return nome;

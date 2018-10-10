@@ -14,46 +14,46 @@ public class Complemento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("fipe")
-	public String fipe;
+	private String fipe;
 
 	@JsonProperty("descVersao")
-	public String descVersao;
+	private String descVersao;
 
 	@JsonProperty("descAno")
-	public String descAno;
+	private String descAno;
 
 	@JsonProperty("Combustivel")
-	public String combustivel;
+	private String combustivel;
 
 	@JsonProperty("Preco")
-	public String preco;
+	private String preco;
 
 	@JsonProperty("CatalogoPecas")
-	public CatalogoPecas catalogoPecas;
+	private CatalogoPecas catalogoPecas;
 
 	@JsonProperty("FichaTecnica")
-	public FichaTecnica fichaTecnica;
+	private FichaTecnica fichaTecnica;
 
 	@JsonProperty("Motor")
-	public Motor motor;
+	private Motor motor;
 
 	@JsonProperty("Transmiss\u00e3o")
-	public Transmissao transmissao;
+	private Transmissao transmissao;
 
 	@JsonProperty("Freios")
-	public Freios freios;
+	private Freios freios;
 
 	@JsonProperty("Dire\u00e7\u00e3o")
-	public Direcao direcao;
+	private Direcao direcao;
 
 	@JsonProperty("Dimens\u00f5es")
-	public Dimensoes dimensoes;
+	private Dimensoes dimensoes;
 
 	@JsonProperty("Desempenho")
-	public Desempenho desempenho;
+	private Desempenho desempenho;
 
 	@JsonProperty("Consumo")
-	public Consumo consumo;
+	private Consumo consumo;
 
 	public String getFipe() {
 		return fipe;

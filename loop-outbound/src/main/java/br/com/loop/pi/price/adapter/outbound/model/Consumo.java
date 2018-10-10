@@ -13,10 +13,10 @@ public class Consumo implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Urbano")
-	public String urbano;
+	private String urbano;
 	
 	@JsonProperty("Rodoviario")
-	public String rodoviario;
+	private String rodoviario;
 
 	public String getUrbano() {
 		return urbano;

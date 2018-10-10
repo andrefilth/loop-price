@@ -13,13 +13,13 @@ public class Dimensoes implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Porta-malas")
-	public String portaMalas;
+	private String portaMalas;
 	
 	@JsonProperty("Tanque de combust\u00edvel")
-	public String tanqueDeCombustivel;
+	private String tanqueDeCombustivel;
 	
 	@JsonProperty("Peso")
-	public String peso;
+	private String peso;
 
 	public String getPortaMalas() {
 		return portaMalas;

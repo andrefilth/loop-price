@@ -18,88 +18,88 @@ public class SuivModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("Authorize")
-	public Authorize authorize;
+	private Authorize authorize;
 	
 	@JsonProperty("Placa")
-	public String placa;
+	private String placa;
 	
 	@JsonProperty("Marca")
-	public String marca;
+	private String marca;
 	
 	@JsonProperty("Modelo")
-	public String modelo;
+	private String modelo;
 	
 	@JsonProperty("Versao")
-	public String versao;
+	private String versao;
 	
 	@JsonProperty("Motorizacao")
-	public String motorizacao;
+	private String motorizacao;
 	
 	@JsonProperty("Chassis")
-	public String chassis;
+	private String chassis;
 	
 	@JsonProperty("AnoFab")
-	public String anoFab;
+	private String anoFab;
 	
 	@JsonProperty("AnoMod")
-	public String anoMod;
+	private String anoMod;
 	
 	@JsonProperty("Combustivel")
-	public String combustivel;
+	private String combustivel;
 	
 	@JsonProperty("Segmento")
-	public String segmento;
+	private String segmento;
 	
 	@JsonProperty("Subsegmento")
-	public String subsegmento;
+	private String subsegmento;
 	
 	@JsonProperty("Carroceria")
-	public String carroceria;
+	private String carroceria;
 	
 	@JsonProperty("Potencia")
-	public String potencia;
+	private String potencia;
 	
 	@JsonProperty("Procedencia")
-	public String procedencia;
+	private String procedencia;
 	
 	@JsonProperty("EixosQtd")
-	public String eixosQtd;
+	private String eixosQtd;
 	
 	@JsonProperty("PBT")
-	public String pBT;
+	private String pBT;
 	
 	@JsonProperty("CMT")
-	public String cMT;
+	private String cMT;
 	
 	@JsonProperty("Cilindradas")
-	public String cilindradas;
+	private String cilindradas;
 	
 	@JsonProperty("NumLugares")
-	public String numLugares;
+	private String numLugares;
 	
 	@JsonProperty("CapacCarga")
-	public String capacCarga;
+	private String capacCarga;
 	
 	@JsonProperty("NumCaixaCambio")
-	public String numCaixaCambio;
+	private String numCaixaCambio;
 	
 	@JsonProperty("NumEixoTras")
-	public String numEixoTras;
+	private String numEixoTras;
 	
 	@JsonProperty("NumEixoAux")
-	public String numEixoAux;
+	private String numEixoAux;
 	
 	@JsonProperty("NumMotor")
-	public String numMotor;
+	private String numMotor;
 	
 	@JsonProperty("relatedFipe")
-	public String relatedFipe;
+	private String relatedFipe;
 	
 	@JsonProperty("config")
-	public Config config;
+	private Config config;
 	
 	@JsonProperty("complemento")
-	public List<Complemento> complemento = new LinkedList<>();
+	private List<Complemento> complemento = new LinkedList<>();
 
 	public Authorize getAuthorize() {
 		return authorize;
@@ -317,13 +317,13 @@ public class SuivModel implements Serializable {
 		this.config = config;
 	}
 
-//	public List<Complemento> getComplemento() {
-//		return complemento;
-//	}
-//
-//	public void setComplemento(List<Complemento> complemento) {
-//		this.complemento = complemento;
-//	}
+	public List<Complemento> getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(List<Complemento> complemento) {
+		this.complemento = complemento;
+	}
 
 	@Override
 	public String toString() {
