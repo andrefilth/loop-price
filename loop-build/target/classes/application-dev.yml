@@ -1,0 +1,75 @@
+### Building application in root
+### mvn clean package
+
+### Running with java
+### java -jar ra-build/target/ra-build-1.0-SNAPSHOT.jar --spring.profiles.active=dev
+
+### Running with maven in root of ra-build
+### mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=dev"
+
+server:
+  port: 8084
+  context-path: /api
+
+########## SPRING CONFIG ###########
+spring:
+  profiles:
+    active: dev
+  application:
+    name: loop-price
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+  logging:
+    pattern:
+      console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]){yellow} %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
+    level:
+      org.springframework: WARN
+      org.hibernate: WARN
+
+########### MONGO-DB ###########
+#  data:
+#    mongodb:
+#      host: db
+#      port: 27017
+#      database: reclame-aqui
+#
+########### USER SECURITY ###########
+#auth-server: http://user:8081/security
+#security:
+#  basic:
+#    enabled: false
+#  oauth2:
+#    client:
+#      client-id: barClientIdPassword
+#      client-secret: secret
+#      access-token-uri: ${auth-server}/oauth/token
+#      user-authorization-uri: ${auth-server}/oauth/authorize
+#      scope: read, write
+#    resource:
+#      token-info-uri: ${auth-server}/oauth/check_token
+#      user-info-uri: ${auth-server}/api/user
+#
+############## REGISTRY ##############
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${DISCOVERY_URL:http://discovery:8761}/eureka/
+#    healthcheck:
+#      enabled: true
+#  instance:
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 2
+#    preferIpAddress: true
+#    statusPageUrlPath: ${server.context-path}/info
+#    healthCheckUrlPath: ${server.context-path}/health
+#
+#proxy:
+#  auth:
+#    load-balanced: true
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
+#
+#ribbon:
+#  eureka:
+#    enabled: true

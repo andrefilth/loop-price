@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.loop.pi.price.adapter.inbound.error.BoardNotFoundException;
+import br.com.loop.pi.price.core.client.dto.SuivDTO;
 import br.com.loop.pi.price.core.port.inbound.PricePortInbound;
-import br.com.loop.pi.price.core.vo.PriceVO;
 
 
 /**
@@ -32,10 +32,10 @@ public class PriceController {
 	@GetMapping("/board")
 	public ResponseEntity<?> findBoard(@RequestParam(value = "board", required = true) String board) {
 		log.info("Iniciando busca de infomações do veículo de placa: " + board);
-		PriceVO priceVO = portInbound.findBoard(board);
-		if (priceVO == null)
+		SuivDTO suivDTO = portInbound.findBoard(board);
+		if (suivDTO == null)
 			throw new BoardNotFoundException( "Placa do veículo não encontrado - Placa: " + board);
-		return new ResponseEntity<>( priceVO,HttpStatus.OK);
+		return new ResponseEntity<>( suivDTO,HttpStatus.OK);
 	}
 
 //	@GetMapping("/service-situation")
